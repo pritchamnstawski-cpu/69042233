@@ -1,163 +1,135 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bloom Café</title>
-<style>
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fff8f7;
-  color: #49353c;
-}
-header {
-  background: white;
-  padding: 22px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.logo { color: #b65c79; font-size: 25px; font-weight: bold; }
-nav a {
-  color: #604550;
-  text-decoration: none;
-  margin: 8px;
-}
-.hero {
-  text-align: center;
-  padding: 90px 20px;
-  background: #f8dfe7;
-}
-.hero h1 { font-size: 48px; color: #a64f6d; }
-.hero p { font-size: 18px; }
-.button {
-  display: inline-block;
-  background: #b65c79;
-  color: white;
-  padding: 13px 25px;
-  border-radius: 25px;
-  text-decoration: none;
-}
-section { padding: 55px 20px; text-align: center; }
-h2 { color: #a64f6d; font-size: 32px; }
-.about { max-width: 700px; margin: auto; line-height: 1.8; }
-.menu {
-  background: white;
-}
-.items {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-.item {
-  background: #fff1f3;
-  padding: 25px;
-  border-radius: 15px;
-  width: 180px;
-}
-.item .emoji { font-size: 42px; }
-.price { color: #a64f6d; font-weight: bold; }
-.contact { background: #f8dfe7; }
-footer {
-  background: #a64f6d;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-@media(max-width:600px) {
-  .hero h1 { font-size: 36px; }
-  header { justify-content: center; gap: 15px; }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Café</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fff5f7; color: #4a3b3b; line-height: 1.6; }
+        header { background: #ffffff; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 24px; font-weight: bold; color: #d65a76; display: flex; align-items: center; gap: 8px; }
+        nav { display: flex; gap: 20px; }
+        nav a { color: #5c4b4b; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        nav a:hover { color: #d65a76; }
+        .hero { text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #ffe3ec 0%, #fff5f7 100%); }
+        .hero h1 { font-size: 42px; color: #b8435d; margin-bottom: 10px; }
+        .hero p { font-size: 18px; color: #6e5b5b; margin-bottom: 25px; }
+        .btn { background: #d65a76; color: white; padding: 12px 28px; border-radius: 25px; text-decoration: none; font-weight: bold; display: inline-block; transition: background 0.2s, transform 0.1s; }
+        .btn:hover { background: #bf4762; transform: translateY(-2px); }
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+        .section-title { text-align: center; font-size: 32px; color: #b8435d; margin-bottom: 10px; }
+        .section-subtitle { text-align: center; color: #7c6868; margin-bottom: 40px; }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .menu-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 15px rgba(214, 90, 118, 0.08); transition: transform 0.2s; }
+        .menu-card:hover { transform: translateY(-5px); }
+        .menu-card img { width: 100%; height: 200px; object-fit: cover; }
+        .menu-content { padding: 20px; }
+        .menu-title-price { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+        .menu-title-price h3 { font-size: 20px; color: #4a3b3b; }
+        .price { font-size: 18px; font-weight: bold; color: #d65a76; }
+        .menu-content p { color: #7c6868; font-size: 14px; margin-bottom: 15px; }
+        .about { background: #ffffff; border-radius: 16px; padding: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); margin-top: 40px; text-align: center; }
+        .about p { max-width: 700px; margin: 15px auto 0; color: #6e5b5b; }
+        footer { background: #4a3b3b; color: white; text-align: center; padding: 30px; margin-top: 60px; }
+        footer p { opacity: 0.8; font-size: 14px; }
+    </style>
 </head>
-
 <body>
 
-<header>
-  <div class="logo">🌸 Bloom Café</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#menu">Menu</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+    <header>
+        <div class="logo">🌸 Bloom Café</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-<div class="hero" id="home">
-  <h1>Welcome to Bloom Café</h1>
-  <p>Good Coffee. Sweet Moments.</p>
-  <p>A little happiness in every cup. ☕</p>
-  <a href="#menu" class="button">Explore Our Menu</a>
-</div>
+    <section id="home" class="hero">
+        <h1>Welcome to Bloom Café</h1>
+        <p>Good Coffee. Sweet Moments. A little happiness in every cup. 🌷</p>
+        <a href="#menu" class="btn">Explore Our Menu</a>
+    </section>
 
-<section id="about">
-  <h2>About Us 🌷</h2>
-  <div class="about">
-    <p>Welcome to Bloom Café! We are a cozy café created for people who love coffee, desserts and relaxing moments.</p>
-    <p>Our goal is to provide delicious drinks, fresh pastries and a warm atmosphere where university students, young adults and workers can relax, study and spend time with friends.</p>
-  </div>
-</section>
+    <div class="container">
+        
+        <div id="menu">
+            <h2 class="section-title">Our Menu</h2>
+            <p class="section-subtitle">Discover our delicious handcrafted favorites</p>
+            
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80" alt="Iced Latte">
+                    <div class="menu-content">
+                        <div class="menu-title-price">
+                            <h3>Iced Latte</h3>
+                            <span class="price">85 THB</span>
+                        </div>
+                        <p>Smooth espresso combined with fresh chilled milk over ice.</p>
+                    </div>
+                </div>
 
-<section class="menu" id="menu">
-  <h2>Our Menu 🍓</h2>
-  <p>Discover our delicious favourites!</p>
-  <div class="items">
+                <div class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=600&q=80" alt="Matcha Latte">
+                    <div class="menu-content">
+                        <div class="menu-title-price">
+                            <h3>Matcha Latte</h3>
+                            <span class="price">95 THB</span>
+                        </div>
+                        <p>Authentic Japanese ceremonial-grade matcha blended with velvety milk.</p>
+                    </div>
+                </div>
 
-    <div class="item">
-      <div class="emoji">🧋</div>
-      <h3>Iced Latte</h3>
-      <p>Espresso with milk</p>
-      <p class="price">85 THB</p>
+                <div class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Strawberry Milk">
+                    <div class="menu-content">
+                        <div class="menu-title-price">
+                            <h3>Strawberry Milk</h3>
+                            <span class="price">90 THB</span>
+                        </div>
+                        <p>Sweet homemade strawberry puree layered with fresh cold milk.</p>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80" alt="Croissant">
+                    <div class="menu-content">
+                        <div class="menu-title-price">
+                            <h3>Butter Croissant</h3>
+                            <span class="price">75 THB</span>
+                        </div>
+                        <p>Flaky, buttery French pastry baked fresh golden brown every morning.</p>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=600&q=80" alt="Strawberry Cake">
+                    <div class="menu-content">
+                        <div class="menu-title-price">
+                            <h3>Strawberry Cake</h3>
+                            <span class="price">120 THB</span>
+                        </div>
+                        <p>Light sponge cake layered with fresh whipped cream and ripe strawberries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="about" class="about">
+            <h2 class="section-title" style="font-size: 26px;">About Us 🌷</h2>
+            <p>Welcome to Bloom Café! We are a cozy café created for people who love coffee, desserts, and relaxing moments. Our goal is to provide delicious drinks, fresh pastries, and a warm atmosphere where university students, young adults, and workers can relax, study, and spend time with friends.</p>
+        </div>
+
     </div>
 
-    <div class="item">
-      <div class="emoji">🍵</div>
-      <h3>Matcha Latte</h3>
-      <p>Japanese matcha and milk</p>
-      <p class="price">95 THB</p>
-    </div>
-
-    <div class="item">
-      <div class="emoji">🍓</div>
-      <h3>Strawberry Milk</h3>
-      <p>Sweet strawberry milk</p>
-      <p class="price">90 THB</p>
-    </div>
-
-    <div class="item">
-      <div class="emoji">🥐</div>
-      <h3>Croissant</h3>
-      <p>Buttery French pastry</p>
-      <p class="price">75 THB</p>
-    </div>
-
-    <div class="item">
-      <div class="emoji">🍰</div>
-      <h3>Strawberry Cake</h3>
-      <p>Fresh strawberry cream cake</p>
-      <p class="price">120 THB</p>
-    </div>
-
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <h2>Contact Us 💌</h2>
-  <p>Email: bloomcafe@example.com</p>
-  <p>Instagram: @bloomcafe</p>
-  <p>Location: Bangkok, Thailand</p>
-</section>
-
-<footer>
-  <p>© 2026 Bloom Café | Made with love 🌸</p>
-</footer>
+    <footer id="contact">
+        <h3>Contact Us 💌</h3>
+        <p style="margin-top: 10px;">Email: bloomcafe@example.com | Phone: +66 2 123 4567</p>
+        <p style="margin-top: 5px;">Open Daily: 8:00 AM – 8:00 PM</p>
+        <p style="margin-top: 15px;">&copy; 2026 Bloom Café. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
