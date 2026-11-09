@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bloom Café</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff8f7;
+  color: #49353c;
+}
+header {
+  background: white;
+  padding: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logo { color: #b65c79; font-size: 25px; font-weight: bold; }
+nav a {
+  color: #604550;
+  text-decoration: none;
+  margin: 8px;
+}
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+  background: #f8dfe7;
+}
+.hero h1 { font-size: 48px; color: #a64f6d; }
+.hero p { font-size: 18px; }
+.button {
+  display: inline-block;
+  background: #b65c79;
+  color: white;
+  padding: 13px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+section { padding: 55px 20px; text-align: center; }
+h2 { color: #a64f6d; font-size: 32px; }
+.about { max-width: 700px; margin: auto; line-height: 1.8; }
+.menu {
+  background: white;
+}
+.items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+.item {
+  background: #fff1f3;
+  padding: 25px;
+  border-radius: 15px;
+  width: 180px;
+}
+.item .emoji { font-size: 42px; }
+.price { color: #a64f6d; font-weight: bold; }
+.contact { background: #f8dfe7; }
+footer {
+  background: #a64f6d;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+@media(max-width:600px) {
+  .hero h1 { font-size: 36px; }
+  header { justify-content: center; gap: 15px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🌸 Bloom Café</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <h1>Welcome to Bloom Café</h1>
+  <p>Good Coffee. Sweet Moments.</p>
+  <p>A little happiness in every cup. ☕</p>
+  <a href="#menu" class="button">Explore Our Menu</a>
+</div>
+
+<section id="about">
+  <h2>About Us 🌷</h2>
+  <div class="about">
+    <p>Welcome to Bloom Café! We are a cozy café created for people who love coffee, desserts and relaxing moments.</p>
+    <p>Our goal is to provide delicious drinks, fresh pastries and a warm atmosphere where university students, young adults and workers can relax, study and spend time with friends.</p>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <h2>Our Menu 🍓</h2>
+  <p>Discover our delicious favourites!</p>
+  <div class="items">
+
+    <div class="item">
+      <div class="emoji">🧋</div>
+      <h3>Iced Latte</h3>
+      <p>Espresso with milk</p>
+      <p class="price">85 THB</p>
+    </div>
+
+    <div class="item">
+      <div class="emoji">🍵</div>
+      <h3>Matcha Latte</h3>
+      <p>Japanese matcha and milk</p>
+      <p class="price">95 THB</p>
+    </div>
+
+    <div class="item">
+      <div class="emoji">🍓</div>
+      <h3>Strawberry Milk</h3>
+      <p>Sweet strawberry milk</p>
+      <p class="price">90 THB</p>
+    </div>
+
+    <div class="item">
+      <div class="emoji">🥐</div>
+      <h3>Croissant</h3>
+      <p>Buttery French pastry</p>
+      <p class="price">75 THB</p>
+    </div>
+
+    <div class="item">
+      <div class="emoji">🍰</div>
+      <h3>Strawberry Cake</h3>
+      <p>Fresh strawberry cream cake</p>
+      <p class="price">120 THB</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Contact Us 💌</h2>
+  <p>Email: bloomcafe@example.com</p>
+  <p>Instagram: @bloomcafe</p>
+  <p>Location: Bangkok, Thailand</p>
+</section>
+
+<footer>
+  <p>© 2026 Bloom Café | Made with love 🌸</p>
+</footer>
+
+</body>
+</html>
